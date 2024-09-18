@@ -1,1 +1,49 @@
-<p>pago works!</p>
+<div class="payment-container">
+    <div class="payment-left">
+      <img src="https://img.freepik.com/foto-gratis/perro-pug-aislado-fondo-blanco_2829-11416.jpg" alt="Payment Image" class="payment-image" />
+    </div>
+  
+    <div class="payment-right">
+      <h2>Pásate a PREMIUM</h2>
+  
+      <form class="payment-form">
+        <div class="form-group">
+          <label for="card-number">Número de tarjeta:</label>
+          <input type="text" id="card-number" placeholder="Número de tarjeta" />
+          <i class="lock-icon"></i>
+        </div>
+  
+        <div class="form-group">
+          <label for="card-holder">Nombre del titular:</label>
+          <input type="text" id="card-holder" placeholder="Nombre del titular" />
+        </div>
+  
+        <div class="form-group-row">
+          <div class="form-group">
+            <label for="expiry-date">MM/AA</label>
+            <input type="text" id="expiry-date" placeholder="MM/AA" />
+          </div>
+          <div class="form-group">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" placeholder="CVV" />
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <input type="checkbox" id="terms" />
+          <label for="terms">Acepto las políticas de privacidad</label>
+        </div>
+  
+        <div class="payment-buttons">
+          <button type="button" class="btn cancel">Cancelar</button>
+          <button type="submit" class="btn pay">Pagar</button>
+        </div>
+  
+        <div class="form-disclaimer">
+          <p>(*) Campos obligatorios</p>
+          <p>(*) Te enviaremos un SMS de verificación</p>
+        </div>
+      </form>
+    </div>
+  </div>
+  
