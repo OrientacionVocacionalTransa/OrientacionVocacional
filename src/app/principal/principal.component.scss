@@ -85,7 +85,7 @@
     background-color: #141850;
     color: white;
     height: 85vh;
-    flex-direction: row-reverse; /* Asegurar que el texto vaya a la derecha y la imagen a la izquierda */
+    flex-direction: row-reverse; /* Mantiene el texto a la derecha y la imagen a la izquierda */
   }
   
   .hero .content {
@@ -94,14 +94,14 @@
   }
   
   .hero h1 {
-    font-size: 2rem;
+    font-size: 2rem; /* Tamaño de "TEST VOCACIONAL" */
     font-weight: normal;
     color: #c7c7e6;
     margin: 0.5rem 0;
   }
   
   .hero h2 {
-    font-size: 3rem;
+    font-size: 3rem; /* Tamaño de "CONSTRUYE TU FUTURO" */
     font-weight: bold;
     margin: 1rem 0;
     color: #ffffff;
@@ -119,7 +119,9 @@
   }
   
   .hero .image img {
-    max-width: 450px;
+    max-width: 650px; /* Ajustar a 650px para una imagen más grande */
+    width: 100%;
+    height: auto;
     border-radius: 15px;
   }
   
