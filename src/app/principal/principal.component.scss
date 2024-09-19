@@ -167,14 +167,16 @@ html {
 
 /* Estilo del filtro */
 .filter-section {
-  text-align: left;
-  margin-bottom: 20px;
-}
-
-.filter {
-  display: inline-block;
-  margin-bottom: 20px;
-  font-size: 1.2rem;
+  background-color: #141850; /* Fondo azul de la sección */
+  color: white; /* Letras blancas */
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 0; /* Elimina márgenes */
+  border: none; /* Sin bordes */
+  display: flex;
+  align-items: center;
+  width: 100%; /* Asegurarse de que el ancho sea completo */
+  box-sizing: border-box; /* Incluye padding y borde en el ancho total */
 }
 
 #city-filter {
@@ -182,7 +184,33 @@ html {
   border-radius: 5px;
   font-size: 1rem;
   margin-left: 10px;
+  background-color: #141850; /* Fondo azul */
+  color: white; /* Letras blancas */
+  border: none; /* Elimina bordes */
+  outline: none; /* Sin contorno al seleccionar */
+  width: auto;
+  min-width: 150px;
 }
+
+label {
+  margin-right: 10px; /* Añadir espacio entre el label y el select */
+}
+
+/* Opcional: eliminar márgenes globales */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #141850; /* Fondo general azul para evitar contrastes */
+}
+
+/* Elimina márgenes y bordes del select y sus elementos */
+select, option {
+  border: none; /* Elimina bordes */
+  outline: none; /* Elimina contornos */
+  appearance: none; /* Para evitar estilos de navegador por defecto */
+}
+
 
 /* Careers Section */
 .careers {
