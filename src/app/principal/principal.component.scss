@@ -142,11 +142,119 @@
     background-color: #e56200;
   }
   
-  /* Scroll-down icon */
-  .scroll-down {
-    text-align: center;
-    margin-top: 2rem;
-    color: #FF7300;
-    font-size: 2rem;
-  }
-  
+/* Scroll-down icon */
+.scroll-down {
+  text-align: center;
+  margin-top: 2rem;
+  color: #FF7300;
+  font-size: 2rem;
+}
+
+.scroll-down a {
+  color: #FF7300;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.scroll-down a:hover {
+  color: #e56200;
+}
+
+/* Smooth scroll effect */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estilo del filtro */
+.filter-section {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.filter {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+#city-filter {
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+/* Careers Section */
+.careers {
+  display: flex;
+  flex-wrap: wrap; /* Permitir que las tarjetas se ajusten a múltiples filas */
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 2rem 5rem;
+  background-color: #141850;
+  color: white;
+}
+
+.careers .card {
+  background-color: white;
+  color: #141850;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 30%;
+  margin-bottom: 2rem; /* Añadir espacio entre las filas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.careers .card img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+.careers .card h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.careers .card p {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+
+/* Careers Section */
+.careers {
+  display: flex;
+  flex-wrap: wrap; /* Permitir que las tarjetas se ajusten a múltiples filas */
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 2rem 5rem;
+  background-color: #141850;
+  color: white;
+}
+
+.careers .card {
+  background-color: white;
+  color: #141850;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 30%; /* Ajustar el ancho para que entren 3 tarjetas por fila */
+  margin-bottom: 2rem; /* Añadir espacio entre las filas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.careers .card img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+.careers .card h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.careers .card p {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
