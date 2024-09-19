@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+html, body {
+  height: 100%;  // Aseguramos que el html y body tengan el 100% de altura
+  margin: 0;
+  padding: 0;
+}
+
+.profile-container {
+  font-family: 'Poppins', sans-serif;  // Aplicamos la fuente Poppins a toda la interfaz
+  background-color: #2d2a75;
+  padding: 20px;
+  color: white;
+  min-height: 100vh;  // Aseguramos que ocupe toda la altura de la pantalla
+  display: flex;
+  flex-direction: column;  // Aseguramos que el contenido esté alineado verticalmente
+
+  .profile-header {
+    display: flex;
+    justify-content: flex-start;  // Alineamos los elementos a la izquierda
+    align-items: center;
+    padding: 20px 0;
+    gap: 40px;  // Agregamos espacio entre los elementos
+    width: 100%;  // Aseguramos que el header ocupe el 100% del ancho
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;  // Espacio entre el logo y el texto "T-UPAO"
+
+      .logo {
+        max-width: 40px;  // Tamaño reducido para que tenga mejor proporción
+      }
+
+      .logo-text {
+        font-size: 24px;  // Tamaño moderado para el texto T-UPAO
+        font-weight: bold;
+        color: white;
+      }
+    }
+
+    .navbar {
+      display: flex;
+      gap: 30px;  // Espacio entre los enlaces del menú
+
+      a {
+        color: #ff7f00;
+        font-size: 16px;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+
+  .profile-content {
+    flex-grow: 1;  // Ocupa el espacio restante en la pantalla
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px;
+    width: 100%;  // Aseguramos que el contenido también ocupe todo el ancho
+
+    .profile-left {
+      width: 35%;
+      text-align: center;
+
+      .profile-picture {
+        border-radius: 15px;
+        max-width: 80%;
+      }
+
+      .welcome-text {
+        font-size: 20px;
+        margin: 15px 0;
+        font-weight: bold;
+      }
+
+      .recommended-career {
+        font-size: 16px;
+        strong {
+          font-size: 18px;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .profile-right {
+      width: 50%;  // Reducido el ancho a 50% para que no esté tan pegado al borde derecho
+      max-width: 600px;  // Ancho máximo para evitar que se expanda demasiado en pantallas grandes
+      margin-right: auto;  // Aseguramos que haya un margen adecuado hacia la derecha
+
+      h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        border-bottom: 2px solid white;
+        padding-bottom: 10px;
+      }
+
+      .profile-form {
+        .form-group {
+          margin-bottom: 15px;
+
+          label {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 5px;
+          }
+
+          input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ff7f00;
+            border-radius: 30px;  // Bordes redondeados para los inputs
+            outline: none;
+            background-color: transparent;
+            color: white;
+            font-size: 16px;
+
+            &::placeholder {
+              color: #ccc;
+            }
+          }
+        }
+
+        .profile-buttons {
+          display: flex;
+          justify-content: center;  // Centrar los botones
+          gap: 20px;  // Espacio entre los botones
+          margin-top: 20px;  // Separación superior para que no queden pegados
+
+          .edit-btn, .test-btn {
+            background-color: transparent;
+            border: 2px solid white;
+            padding: 10px 20px;
+            border-radius: 30px;  // Bordes redondeados para los botones
+            cursor: pointer;
+            font-weight: bold;
+            color: white;
+            transition: 0.3s;
+
+            &:hover {
+              background-color: white;
+              color: #2d2a75;
+            }
+          }
+
+          .test-btn {
+            background-color: #ff7f00;
+            color: white;
+            border-color: #ff7f00;
+
+            &:hover {
+              background-color: #d96c00;
+              border-color: #d96c00;
+            }
+          }
+        }
+      }
+    }
+  }
+}
