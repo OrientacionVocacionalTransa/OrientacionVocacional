@@ -1,164 +1,186 @@
 /* Navbar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 5rem;
-    background-color: #141850;
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem; /* Reducir el padding para pantallas pequeñas */
+  background-color: #141850;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  flex-wrap: wrap; /* Permite ajustar el contenido si es necesario */
+}
+
+.navbar .logo img {
+  max-height: 50px;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem; /* Reducir el espacio entre los enlaces */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: white;
+  font-size: 1rem; /* Reducir el tamaño de fuente para pantallas pequeñas */
+  padding: 0.5rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-links li a:hover {
+  background-color: rgba(255, 115, 0, 0.2);
+  color: #FF7300;
+}
+
+.nav-links li a:active,
+.nav-links li a:focus {
+  border-bottom: 2px solid #FF7300;
+  color: #FF7300;
+}
+
+/* Auth Links (Iniciar Sesión y Registro) */
+.auth-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.auth-links a {
+  color: white;
+  padding: 0.5rem;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+.auth-links a:hover {
+  background-color: rgba(255, 115, 0, 0.2);
+}
+
+.auth-links a:active,
+.auth-links a:focus {
+  border-bottom: 2px solid #FF7300;
+  color: #FF7300;
+}
+
+.auth-links .register {
+  background-color: #FF7300;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  border: 2px solid transparent;
+  transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+.auth-links .register:hover {
+  background-color: #e56200;
+  border: 2px solid #FF7300;
+}
+
+/* MEDIA QUERIES */
+
+/* Para pantallas medianas y pequeñas */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 0.5rem 1rem; /* Reducir padding en pantallas medianas */
   }
-  
-  .navbar .logo img {
-    max-height: 50px;
-  }
-  
+
   .nav-links {
-    list-style-type: none;
-    display: flex;
-    gap: 2rem;
+    gap: 0.5rem; /* Reducir el espacio entre los enlaces en pantallas medianas */
   }
-  
-  .nav-links li a {
-    color: white;
-    font-size: 1.1rem;
-    padding: 0.5rem;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    text-decoration: none; /* No subrayado por defecto */
-    border-bottom: 2px solid transparent; /* Borde invisible por defecto */
-  }
-  
-  .nav-links li a:hover {
-    background-color: rgba(255, 115, 0, 0.2); /* Fondo sombreado naranja al pasar el cursor */
-    color: #FF7300;
-  }
-  
-  .nav-links li a:active,
-  .nav-links li a:focus {
-    border-bottom: 2px solid #FF7300; /* Subrayado de borde al hacer clic */
-    color: #FF7300;
-  }
-  
-  /* Auth Links (Iniciar Sesión y Registro) */
-  .auth-links a {
-    margin-left: 1rem;
-    color: #fcfcfc;
-    padding: 0.5rem;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    text-decoration: none; /* No subrayado por defecto */
-    border-bottom: 2px solid transparent;
-  }
-  
-  .auth-links a:hover {
-    background-color: rgba(255, 115, 0, 0.2); /* Fondo sombreado naranja al pasar el cursor */
-  }
-  
-  .auth-links a:active,
-  .auth-links a:focus {
-    border-bottom: 2px solid #FF7300; /* Subrayado de borde al hacer clic */
-    color: #FF7300;
-  }
-  
-  /* Registro (Botón) */
+
   .auth-links .register {
-    background-color: #FF7300;
+    padding: 0.3rem 0.8rem; /* Ajustar tamaño del botón de registro */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: nowrap; /* Evitar que se ajusten en columna */
     padding: 0.5rem 1rem;
-    border-radius: 5px;
-    font-weight: bold;
-    color: white;
-    border: 2px solid transparent; /* Borde inicial transparente */
-    transition: background-color 0.3s ease, border 0.3s ease;
   }
-  
-  .auth-links .register:hover {
-    background-color: #e56200;
-    border: 2px solid #FF7300; /* Borde naranja al pasar el cursor */
+
+  .nav-links {
+    gap: 0.5rem; /* Menor espacio entre enlaces */
   }
-  
+
+  .nav-links li a {
+    font-size: 0.9rem; /* Reducir tamaño de los enlaces en pantallas pequeñas */
+    padding: 0.3rem;
+  }
+
+  .auth-links .register {
+    padding: 0.3rem 0.6rem; /* Ajustar tamaño del botón de registro en pantallas pequeñas */
+  }
+
+  .auth-links a {
+    font-size: 0.9rem; /* Ajustar tamaño de fuente */
+  }
+}
+
 /* Hero Section */
 .hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 5rem;
-    background-color: #141850;
-    color: white;
-    height: 85vh;
-    flex-direction: row-reverse; /* Mantiene el texto a la derecha y la imagen a la izquierda */
-  }
-  
-  .hero .content {
-    max-width: 600px;
-    text-align: left;
-  }
-  
-  .hero h1 {
-    font-size: 2rem; /* Tamaño de "TEST VOCACIONAL" */
-    font-weight: normal;
-    color: #c7c7e6;
-    margin: 0.5rem 0;
-  }
-  
-  .hero h2 {
-    font-size: 3rem; /* Tamaño de "CONSTRUYE TU FUTURO" */
-    font-weight: bold;
-    margin: 1rem 0;
-    color: #ffffff;
-  }
-  
-  .hero p {
-    margin: 1rem 0;
-    font-size: 1.1rem;
-    color: #c7c7e6;
-  }
-  
-  .hero .image {
-    display: flex;
-    justify-content: flex-start;
-  }
-  
-  .hero .image img {
-    max-width: 650px; /* Ajustar a 650px para una imagen más grande */
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-  }
-  
-  .hero .btn-comenzar {
-    margin-top: 1rem;
-    padding: 1rem 2rem;
-    background-color: #FF7300;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.2rem;
-    text-decoration: none;
-  }
-  
-  .hero .btn-comenzar:hover {
-    background-color: #e56200;
-  }
-  
-/* Scroll-down icon */
-.scroll-down {
-  text-align: center;
-  margin-top: 2rem;
-  color: #FF7300;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5rem;
+  background-color: #141850; /* Fondo azul oscuro */
+  color: white;
+}
+
+.hero .content {
+  max-width: 600px;
+  text-align: left;
+}
+
+.hero h1 {
   font-size: 2rem;
+  font-weight: normal;
+  color: #c7c7e6;
 }
 
-.scroll-down a {
-  color: #FF7300;
+.hero h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+
+.hero p {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  color: #c7c7e6;
+}
+
+.hero .btn-comenzar {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  background-color: #FF7300; /* Botón de color naranja */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
   text-decoration: none;
-  transition: color 0.3s;
 }
 
-.scroll-down a:hover {
-  color: #e56200;
+.hero .btn-comenzar:hover {
+  background-color: #e56200; /* Cambiar color al pasar el cursor */
 }
+
+/* Imagen */
+.hero .image img {
+  max-width: 650px;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
 
 /* Smooth scroll effect */
 html {
@@ -196,60 +218,6 @@ label {
   margin-right: 10px; /* Añadir espacio entre el label y el select */
 }
 
-/* Opcional: eliminar márgenes globales */
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: #141850; /* Fondo general azul para evitar contrastes */
-}
-
-/* Elimina márgenes y bordes del select y sus elementos */
-select, option {
-  border: none; /* Elimina bordes */
-  outline: none; /* Elimina contornos */
-  appearance: none; /* Para evitar estilos de navegador por defecto */
-}
-
-
-/* Careers Section */
-.careers {
-  display: flex;
-  flex-wrap: wrap; /* Permitir que las tarjetas se ajusten a múltiples filas */
-  justify-content: space-around;
-  align-items: flex-start;
-  padding: 2rem 5rem;
-  background-color: #141850;
-  color: white;
-}
-
-.careers .card {
-  background-color: white;
-  color: #141850;
-  padding: 1.5rem;
-  border-radius: 10px;
-  text-align: center;
-  width: 30%;
-  margin-bottom: 2rem; /* Añadir espacio entre las filas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.careers .card img {
-  max-width: 100%;
-  border-radius: 15px;
-}
-
-.careers .card h3 {
-  font-size: 1.5rem;
-  margin-top: 1rem;
-}
-
-.careers .card p {
-  font-size: 1rem;
-  margin-top: 1rem;
-}
-
-
 /* Careers Section */
 .careers {
   display: flex;
@@ -285,4 +253,55 @@ select, option {
 .careers .card p {
   font-size: 1rem;
   margin-top: 1rem;
+}
+
+/* MEDIA QUERIES */
+
+/* Para pantallas medianas como tablets */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 1rem 2rem;
+  }
+
+  .hero {
+    flex-direction: column; /* La imagen y el texto se apilan */
+    text-align: center;
+  }
+
+  .hero .image img {
+    max-width: 500px;
+  }
+
+  .careers .card {
+    width: 45%; /* Menos tarjetas por fila */
+  }
+}
+
+/* Para pantallas pequeñas como móviles */
+@media (max-width: 576px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero .image img {
+    max-width: 300px;
+  }
+
+  .hero .btn-comenzar {
+    width: 100%; /* Botón ocupa todo el ancho */
+  }
+
+  .careers .card {
+    width: 100%; /* Las tarjetas ocupan todo el ancho */
+  }
 }
