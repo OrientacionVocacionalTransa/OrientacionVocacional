@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 html, body {
-  height: 100%;  // Aseguramos que el html y body tengan el 100% de altura
+  height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #2d2a75;  // Aplicamos el mismo color de fondo a toda la página
+  background-color: #2d2a75;
 }
 
 .plans-container {
   font-family: 'Poppins', sans-serif;
-  background-color: #2d2a75;  // Aseguramos que el fondo sea el mismo que el resto de la página
+  background-color: #2d2a75;
   padding: 30px;
   text-align: center;
   color: white;
-  min-height: 100vh;  // Aseguramos que la sección de planes ocupe toda la altura de la pantalla
+  min-height: 100vh;
 
   .plans-title {
     font-size: 32px;
@@ -30,13 +30,16 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    flex-wrap: wrap; 
 
     .plan {
       background-color: #ffffff;
       color: #2d2a75;
       border-radius: 10px;
       padding: 20px;
-      width: 230px;
+      width: 100%; 
+      max-width: 230px; 
+      margin: 10px; 
       text-align: left;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       display: flex;
@@ -64,7 +67,6 @@ html, body {
         li {
           font-size: 13px;
           margin-bottom: 8px;
-          list-style-type: none;
           padding-left: 15px;
           position: relative;
 
@@ -102,7 +104,7 @@ html, body {
         }
 
         .plan-logo {
-          max-width: 50px;  // Ajuste del tamaño de la imagen
+          max-width: 50px;
           height: auto;
         }
       }
@@ -111,7 +113,7 @@ html, body {
     .divider {
       width: 1px;
       background-color: rgba(255, 255, 255, 0.5);
-      margin: 0 20px;
+      margin: 20px 0;
       height: auto;
     }
 
@@ -138,16 +140,19 @@ html, body {
       }
 
       .plan-logo {
-        max-width: 50px;  // Ajuste del tamaño de la corona
+        max-width: 50px;
         height: auto;
       }
     }
   }
-}
 
-footer {
-  background-color: #2d2a75;  // Aseguramos que el fondo del footer sea del mismo color
-  padding: 20px;
-  color: white;
-  text-align: center;
+  @media (min-width: 768px) {
+    .plans {
+      flex-wrap: nowrap; // Se asegura de que los elementos no se ajusten en filas en pantallas más grandes
+    }
+
+    .plan {
+      width: 230px; // Ancho fijo para pantallas medianas y grandes
+    }
+  }
 }
