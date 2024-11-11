@@ -1,164 +1,199 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-html, body {
-  height: 100%;  // Aseguramos que el html y body tengan el 100% de altura
+body {
   margin: 0;
-  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #1a1b4b;
+  color: white;
+}
+
+.header {
+  background-color: #1a1b4b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+    .logo {
+      max-width: 50px;
+    }
+
+    .company-name {
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+    }
+  }
 }
 
 .profile-container {
-  font-family: 'Poppins', sans-serif;  // Aplicamos la fuente Poppins a toda la interfaz
-  background-color: #2d2a75;
-  padding: 20px;
-  color: white;
-  min-height: 100vh;  // Aseguramos que ocupe toda la altura de la pantalla
   display: flex;
-  flex-direction: column;  // Aseguramos que el contenido esté alineado verticalmente
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+  gap: 80px;
+  margin-top: 20px;
 
-  .profile-header {
-    display: flex;
-    justify-content: flex-start;  // Alineamos los elementos a la izquierda
-    align-items: center;
-    padding: 20px 0;
-    gap: 40px;  // Agregamos espacio entre los elementos
-    width: 100%;  // Aseguramos que el header ocupe el 100% del ancho
+  .profile-card {
+    text-align: center;
 
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 10px;  // Espacio entre el logo y el texto "T-UPAO"
-
-      .logo {
-        max-width: 40px;  // Tamaño reducido para que tenga mejor proporción
-      }
-
-      .logo-text {
-        font-size: 24px;  // Tamaño moderado para el texto T-UPAO
-        font-weight: bold;
-        color: white;
-      }
+    .profile-image {
+      border-radius: 50%;
+      width: 200px; // Ajusté el tamaño de la imagen
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 20px;
     }
 
-    .navbar {
-      display: flex;
-      gap: 30px;  // Espacio entre los enlaces del menú
+    h2 {
+      font-size: 24px;
+      margin: 10px 0;
+    }
 
-      a {
-        color: #ff7f00;
-        font-size: 16px;
-        text-decoration: none;
-        font-weight: bold;
+    p {
+      font-size: 18px;
+      margin: 8px 0;
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+
+  .profile-details {
+    h1 {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    .profile-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        label {
+          font-size: 16px;
+          margin-bottom: 5px;
+        }
+        input {
+          padding: 10px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+          font-size: 16px;
+          width: 100%; // Ajuste para responsividad
+        }
+      }
+
+      .edit-button {
+        background-color: #ff7f00;
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
 
         &:hover {
-          color: white;
+          background-color: #d96c00;
         }
       }
     }
   }
+}
 
-  .profile-content {
-    flex-grow: 1;  // Ocupa el espacio restante en la pantalla
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-top: 20px;
-    width: 100%;  // Aseguramos que el contenido también ocupe todo el ancho
+/* Media Queries para Responsividad */
 
-    .profile-left {
-      width: 35%;
-      text-align: center;
+/* Pantallas de laptop pequeñas y tablets */
+@media (max-width: 1024px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
 
-      .profile-picture {
-        border-radius: 15px;
-        max-width: 80%;
-      }
-
-      .welcome-text {
-        font-size: 20px;
-        margin: 15px 0;
-        font-weight: bold;
-      }
-
-      .recommended-career {
-        font-size: 16px;
-        strong {
-          font-size: 18px;
-          font-weight: bold;
-        }
-      }
+  .profile-card {
+    .profile-image {
+      width: 150px; // Imagen más pequeña para tablets
+      height: 150px;
     }
 
-    .profile-right {
-      width: 50%;  // Reducido el ancho a 50% para que no esté tan pegado al borde derecho
-      max-width: 600px;  // Ancho máximo para evitar que se expanda demasiado en pantallas grandes
-      margin-right: auto;  // Aseguramos que haya un margen adecuado hacia la derecha
+    h2 {
+      font-size: 20px;
+    }
 
-      h1 {
-        font-size: 36px;
-        margin-bottom: 20px;
-        border-bottom: 2px solid white;
-        padding-bottom: 10px;
+    p, h3 {
+      font-size: 16px;
+    }
+  }
+
+  .profile-details {
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .profile-form {
+      .form-group label {
+        font-size: 14px;
       }
+      .form-group input {
+        padding: 8px;
+        font-size: 14px;
+      }
+      .edit-button {
+        padding: 10px;
+      }
+    }
+  }
+}
 
-      .profile-form {
-        .form-group {
-          margin-bottom: 15px;
+/* Pantallas de móvil */
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+  }
 
-          label {
-            font-size: 16px;
-            display: block;
-            margin-bottom: 5px;
-          }
+  .profile-card {
+    .profile-image {
+      width: 100px; // Imagen más pequeña para móviles
+      height: 100px;
+    }
 
-          input {
-            width: 100%;
-            padding: 10px;
-            border: 2px solid #ff7f00;
-            border-radius: 30px;  // Bordes redondeados para los inputs
-            outline: none;
-            background-color: transparent;
-            color: white;
-            font-size: 16px;
+    h2 {
+      font-size: 18px;
+    }
 
-            &::placeholder {
-              color: #ccc;
-            }
-          }
-        }
+    p, h3 {
+      font-size: 14px;
+    }
+  }
 
-        .profile-buttons {
-          display: flex;
-          justify-content: center;  // Centrar los botones
-          gap: 20px;  // Espacio entre los botones
-          margin-top: 20px;  // Separación superior para que no queden pegados
+  .profile-details {
+    h1 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
 
-          .edit-btn, .test-btn {
-            background-color: transparent;
-            border: 2px solid white;
-            padding: 10px 20px;
-            border-radius: 30px;  // Bordes redondeados para los botones
-            cursor: pointer;
-            font-weight: bold;
-            color: white;
-            transition: 0.3s;
-
-            &:hover {
-              background-color: white;
-              color: #2d2a75;
-            }
-          }
-
-          .test-btn {
-            background-color: #ff7f00;
-            color: white;
-            border-color: #ff7f00;
-
-            &:hover {
-              background-color: #d96c00;
-              border-color: #d96c00;
-            }
-          }
-        }
+    .profile-form {
+      .form-group label {
+        font-size: 12px;
+      }
+      .form-group input {
+        padding: 6px;
+        font-size: 12px;
+      }
+      .edit-button {
+        padding: 8px;
       }
     }
   }
