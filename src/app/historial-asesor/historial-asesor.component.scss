@@ -1,0 +1,135 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #1a1b4b;
+  color: white;
+}
+
+.header {
+  background-color: #1a1b4b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .logo {
+      max-width: 50px;
+    }
+
+    .company-name {
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+    }
+  }
+}
+
+.history-container {
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .advisory-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #2d2a75;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+
+    .advisory-info {
+      max-width: 70%;
+
+      p {
+        margin: 5px 0;
+        font-size: 16px;
+      }
+    }
+
+    .action-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      .view-button,
+      .edit-button {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-size: 14px;
+      }
+
+      .view-button {
+        background-color: #ff7f00;
+        color: white;
+
+        &:hover {
+          background-color: #d96c00;
+        }
+      }
+
+      .edit-button {
+        background-color: #1f1a4b;
+        color: white;
+
+        &:hover {
+          background-color: #141033;
+        }
+      }
+    }
+  }
+}
+
+/* Media Queries para Responsividad */
+
+/* Pantallas de laptop pequeñas y tablets */
+@media (max-width: 1024px) {
+  .history-container {
+    padding: 20px;
+  }
+
+  .advisory-card {
+    flex-direction: column;
+    align-items: stretch;
+
+    .advisory-info {
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+/* Pantallas de móvil */
+@media (max-width: 768px) {
+  .history-container {
+    padding: 15px;
+  }
+
+  .advisory-card {
+    padding: 10px;
+
+    .advisory-info p {
+      font-size: 14px;
+    }
+
+    .action-buttons .view-button,
+    .action-buttons .edit-button {
+      font-size: 12px;
+      padding: 6px 12px;
+    }
+  }
+}
