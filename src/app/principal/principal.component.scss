@@ -1,307 +1,237 @@
-/* Navbar */
+/* Importar fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* General */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #2d2a75;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden; /* Evitar el desplazamiento horizontal */
+}
+
+/* Barra de Navegación */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem; /* Reducir el padding para pantallas pequeñas */
+  padding: 1rem 2rem;
   background-color: #141850;
   color: white;
   font-size: 1rem;
   font-weight: bold;
-  flex-wrap: wrap; /* Permite ajustar el contenido si es necesario */
+  flex-wrap: wrap;
 }
 
-.navbar .logo img {
-  max-height: 50px;
+.logo {
+  max-width: 150px;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .nav-links {
   list-style-type: none;
   display: flex;
-  gap: 1rem; /* Reducir el espacio entre los enlaces */
+  gap: 1rem;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 .nav-links li a {
   color: white;
-  font-size: 1rem; /* Reducir el tamaño de fuente para pantallas pequeñas */
+  font-size: 1rem;
   padding: 0.5rem;
-  transition: color 0.3s ease, background-color 0.3s ease;
   text-decoration: none;
-  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-.nav-links li a:hover {
-  background-color: rgba(255, 115, 0, 0.2);
-  color: #FF7300;
-}
-
-.nav-links li a:active,
-.nav-links li a:focus {
-  border-bottom: 2px solid #FF7300;
-  color: #FF7300;
-}
-
-/* Auth Links (Iniciar Sesión y Registro) */
 .auth-links {
   display: flex;
   gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
-.auth-links a {
-  color: white;
-  padding: 0.5rem;
-  transition: color 0.3s ease, background-color 0.3s ease;
+.auth-links .login {
+  color: #ff7f00;
+  font-weight: bold;
   text-decoration: none;
-  border-bottom: 2px solid transparent;
-}
-
-.auth-links a:hover {
-  background-color: rgba(255, 115, 0, 0.2);
-}
-
-.auth-links a:active,
-.auth-links a:focus {
-  border-bottom: 2px solid #FF7300;
-  color: #FF7300;
+  transition: color 0.3s ease;
 }
 
 .auth-links .register {
-  background-color: #FF7300;
+  background-color: #ff7f00;
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  font-weight: bold;
   color: white;
-  border: 2px solid transparent;
-  transition: background-color 0.3s ease, border 0.3s ease;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .auth-links .register:hover {
-  background-color: #e56200;
-  border: 2px solid #FF7300;
+  background-color: #d96c00;
 }
 
-/* MEDIA QUERIES */
-
-/* Para pantallas medianas y pequeñas */
-@media (max-width: 992px) {
-  .navbar {
-    padding: 0.5rem 1rem; /* Reducir padding en pantallas medianas */
-  }
-
-  .nav-links {
-    gap: 0.5rem; /* Reducir el espacio entre los enlaces en pantallas medianas */
-  }
-
-  .auth-links .register {
-    padding: 0.3rem 0.8rem; /* Ajustar tamaño del botón de registro */
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    flex-wrap: nowrap; /* Evitar que se ajusten en columna */
-    padding: 0.5rem 1rem;
-  }
-
-  .nav-links {
-    gap: 0.5rem; /* Menor espacio entre enlaces */
-  }
-
-  .nav-links li a {
-    font-size: 0.9rem; /* Reducir tamaño de los enlaces en pantallas pequeñas */
-    padding: 0.3rem;
-  }
-
-  .auth-links .register {
-    padding: 0.3rem 0.6rem; /* Ajustar tamaño del botón de registro en pantallas pequeñas */
-  }
-
-  .auth-links a {
-    font-size: 0.9rem; /* Ajustar tamaño de fuente */
-  }
-}
-
-/* Hero Section */
+/* Sección Hero */
 .hero {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 2rem 5rem;
-  background-color: #141850; /* Fondo azul oscuro */
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: #141850;
   color: white;
 }
 
-.hero .content {
+.content {
   max-width: 600px;
-  text-align: left;
+  margin-bottom: 2rem;
 }
 
-.hero h1 {
+h1 {
   font-size: 2rem;
-  font-weight: normal;
   color: #c7c7e6;
+  margin-bottom: 10px;
 }
 
-.hero h2 {
-  font-size: 3rem;
+h2 {
+  font-size: 2.5rem;
   font-weight: bold;
   color: white;
+  margin-bottom: 20px;
 }
 
-.hero p {
-  margin: 1rem 0;
+p {
   font-size: 1.1rem;
   color: #c7c7e6;
+  margin-bottom: 20px;
 }
 
-.hero .btn-comenzar {
-  margin-top: 1rem;
-  padding: 1rem 2rem;
-  background-color: #FF7300; /* Botón de color naranja */
+.btn-comenzar {
+  background-color: #ff7f00;
   color: white;
   border: none;
-  border-radius: 5px;
+  padding: 10px 20px;
+  border-radius: 30px;
   cursor: pointer;
   font-weight: bold;
-  font-size: 1.2rem;
-  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
-.hero .btn-comenzar:hover {
-  background-color: #e56200; /* Cambiar color al pasar el cursor */
+.btn-comenzar:hover {
+  background-color: #d96c00;
 }
 
-/* Imagen */
-.hero .image img {
-  max-width: 650px;
-  width: 100%;
+.image img {
+  max-width: 100%;
   height: auto;
   border-radius: 15px;
+  margin-top: 20px;
 }
 
-
-/* Smooth scroll effect */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Estilo del filtro */
+/* Filtro de ciudades */
 .filter-section {
-  background-color: #141850; /* Fondo azul de la sección */
-  color: white; /* Letras blancas */
+  background-color: #141850;
+  color: white;
   padding: 1rem;
   border-radius: 5px;
-  margin: 0; /* Elimina márgenes */
-  border: none; /* Sin bordes */
   display: flex;
   align-items: center;
-  width: 100%; /* Asegurarse de que el ancho sea completo */
-  box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+  justify-content: center;
+  width: 100%;
 }
 
 #city-filter {
   padding: 0.5rem;
   border-radius: 5px;
-  font-size: 1rem;
-  margin-left: 10px;
-  background-color: #141850; /* Fondo azul */
-  color: white; /* Letras blancas */
-  border: none; /* Elimina bordes */
-  outline: none; /* Sin contorno al seleccionar */
-  width: auto;
+  background-color: #141850;
+  color: white;
+  border: none;
+  outline: none;
   min-width: 150px;
 }
 
 label {
-  margin-right: 10px; /* Añadir espacio entre el label y el select */
+  margin-right: 10px;
 }
 
-/* Careers Section */
+/* Sección de Carreras */
 .careers {
   display: flex;
-  flex-wrap: wrap; /* Permitir que las tarjetas se ajusten a múltiples filas */
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: flex-start;
-  padding: 2rem 5rem;
+  gap: 20px;
+  padding: 2rem 0;
   background-color: #141850;
-  color: white;
 }
 
-.careers .card {
+.card {
   background-color: white;
   color: #141850;
-  padding: 1.5rem;
+  padding: 20px;
   border-radius: 10px;
   text-align: center;
-  width: 30%; /* Ajustar el ancho para que entren 3 tarjetas por fila */
-  margin-bottom: 2rem; /* Añadir espacio entre las filas */
+  width: 100%;
+  max-width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
-.careers .card img {
-  max-width: 100%;
-  border-radius: 15px;
+.card img {
+  max-width: 150px; /* Tamaño máximo de la imagen */
+  height: auto;
+  margin-bottom: 10px;
 }
 
-.careers .card h3 {
-  font-size: 1.5rem;
-  margin-top: 1rem;
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #000; /* Texto negro */
 }
 
-.careers .card p {
-  font-size: 1rem;
-  margin-top: 1rem;
+.card p {
+  font-size: 14px;
+  color: #000; /* Texto negro */
 }
 
-/* MEDIA QUERIES */
-
-/* Para pantallas medianas como tablets */
-@media (max-width: 992px) {
-  .navbar {
-    padding: 1rem 2rem;
-  }
-
-  .hero {
-    flex-direction: column; /* La imagen y el texto se apilan */
-    text-align: center;
-  }
-
-  .hero .image img {
-    max-width: 500px;
-  }
-
-  .careers .card {
-    width: 45%; /* Menos tarjetas por fila */
-  }
-}
-
-/* Para pantallas pequeñas como móviles */
-@media (max-width: 576px) {
+/* Media Queries */
+@media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .nav-links {
     flex-direction: column;
-    gap: 1rem;
+    align-items: center;
+    gap: 10px;
   }
 
-  .hero h2 {
-    font-size: 2rem;
+  .auth-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 
-  .hero .image img {
-    max-width: 300px;
+  .hero {
+    padding: 1rem;
   }
 
-  .hero .btn-comenzar {
-    width: 100%; /* Botón ocupa todo el ancho */
+  .content {
+    max-width: 100%;
   }
 
-  .careers .card {
-    width: 100%; /* Las tarjetas ocupan todo el ancho */
+  .careers {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%; /* Ocupa casi todo el ancho en móviles */
   }
 }
