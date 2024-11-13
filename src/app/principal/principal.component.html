@@ -1,0 +1,52 @@
+<!-- Barra de Navegación + Sección Principal (Hero) -->
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="https://i.pinimg.com/736x/bb/24/f4/bb24f440990ac516ed9a2796510744b0.jpg" alt="T-UPAO">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">INICIO</a></li>
+      <li><a href="#">SERVICIOS</a></li>
+      <li><a href="#">PLANES</a></li>
+      <li><a href="#">CONTACTO</a></li>
+    </ul>
+    <div class="auth-links">
+      <a href="#" class="login">INICIAR SESIÓN</a>
+      <a href="#" class="register">REGISTRO</a>
+    </div>
+  </nav>
+</header>
+
+<!-- Sección Hero -->
+<section class="hero">
+  <div class="content">
+    <h1>TEST VOCACIONAL</h1>
+    <h2>CONSTRUYE TU FUTURO!</h2>
+    <p>Descubre tu vocación ideal. Con este test, podrás conocer tus talentos y cómo encajan en el mundo laboral. ¡Da el primer paso hacia tu futuro profesional!</p>
+    <a href="#" class="btn-comenzar">COMENZAR</a>
+  </div>
+  <div class="image">
+    <img src="https://png.pngtree.com/png-vector/20240607/ourmid/pngtree-two-students-talking-in-class-cartoon-png-image_12632451.png" alt="Estudiantes leyendo">
+  </div>
+</section>
+
+<!-- Filtro de ciudades -->
+<div class="filter-section">
+  <div class="filter">
+    <label for="city-filter">Filtrar por ciudad:</label>
+    <select id="city-filter" (change)="onCityChange($event)">
+      <option value="all">Todas</option>
+      <option value="trujillo">Trujillo</option>
+      <option value="piura">Piura</option>
+    </select>
+  </div>
+</div>
+
+<!-- Sección de carreras con las tarjetas -->
+<div class="careers">
+  <div *ngFor="let card of filteredCards" class="card">
+    <img [src]="card.image" [alt]="card.title" *ngIf="card.image">
+    <h3>{{ card.title }}</h3>
+    <p>{{ card.description }}</p>
+  </div>
+</div>
