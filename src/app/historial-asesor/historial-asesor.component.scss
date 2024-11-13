@@ -64,7 +64,8 @@ body {
       gap: 10px;
 
       .view-button,
-      .edit-button {
+      .edit-button,
+      .start-button {
         padding: 8px 16px;
         border: none;
         border-radius: 5px;
@@ -74,20 +75,29 @@ body {
       }
 
       .view-button {
-        background-color: #ff7f00;
+        background-color: #f1c40f;
         color: white;
 
         &:hover {
-          background-color: #d96c00;
+          background-color: #a55503;
         }
       }
 
       .edit-button {
-        background-color: #1f1a4b;
+        background-color: #e70c13;
         color: white;
 
         &:hover {
-          background-color: #141033;
+          background-color: #a50303;
+        }
+      }
+
+      .start-button {
+        background-color: #2498db;
+        color: white;
+
+        &:hover {
+          background-color: #051f8f;
         }
       }
     }
@@ -127,7 +137,8 @@ body {
     }
 
     .action-buttons .view-button,
-    .action-buttons .edit-button {
+    .action-buttons .edit-button,
+    .action-buttons .start-button {
       font-size: 12px;
       padding: 6px 12px;
     }
