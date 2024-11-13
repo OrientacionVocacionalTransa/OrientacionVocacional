@@ -1,0 +1,44 @@
+  
+  .card {
+    background-color: #1b2a59;
+    border: 5px solid rgb(0, 149, 255); /* Añade un borde negro */
+    border-radius: 8px;
+    padding: 16px;
+    margin: 10px 0;
+    width: 90%; /* Ajusta el ancho al 90% de la pantalla */
+    max-width: 800px; /* Limita el ancho máximo */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .info {
+    max-width: 250px;
+  }
+  
+  .actions {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  button {
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin: 4px 0;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .reprogramar {
+    background-color: #00bfff; /* Cambia el color a celeste */
+    color: white;
+  }
+  
+  .cancelar {
+    background-color: #333;
+    color: white;
+  }
+  
