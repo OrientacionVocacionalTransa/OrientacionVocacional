@@ -7,39 +7,63 @@ html, body {
   background-color: #2d2a75;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: transparent;
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .logo {
+      max-width: 50px;
+    }
+
+    .company-name {
+      font-family: 'Poppins', sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      color: white; // Cambié el color a blanco
+    }
+  }
+}
+
 .plans-container {
   font-family: 'Poppins', sans-serif;
   background-color: #2d2a75;
-  padding: 30px;
+  padding: 10px 20px; // Reducí el padding para subir el contenido
   text-align: center;
   color: white;
   min-height: 100vh;
 
   .plans-title {
-    font-size: 32px;
-    margin-bottom: 15px;
+    font-size: 36px;
+    margin-bottom: 10px;
   }
 
   .plans-description {
-    font-size: 14px;
+    font-size: 16px;
     max-width: 600px;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 20px auto;
   }
 
   .plans {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 
     .plan {
       background-color: #ffffff;
       color: #2d2a75;
       border-radius: 10px;
       padding: 20px;
-      width: 100%; 
-      max-width: 230px; 
-      margin: 10px; 
+      width: 100%;
+      max-width: 230px;
+      margin: 10px;
       text-align: left;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       display: flex;
@@ -97,7 +121,7 @@ html, body {
         justify-content: center;
         align-items: center;
         gap: 10px;
-        
+
         h2 {
           font-size: 22px;
           margin-bottom: 0;
@@ -148,11 +172,11 @@ html, body {
 
   @media (min-width: 768px) {
     .plans {
-      flex-wrap: nowrap; // Se asegura de que los elementos no se ajusten en filas en pantallas más grandes
+      flex-wrap: nowrap;
     }
 
     .plan {
-      width: 230px; // Ancho fijo para pantallas medianas y grandes
+      width: 230px;
     }
   }
 }
